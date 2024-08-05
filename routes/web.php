@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // LANDING PAGE
 Route::namespace('App\Livewire\LandingPage')->group(function () {
     Route::get('/', Index::class)->name('beranda');
-
+    Route::get('berita', News::class)->name('berita');
     // PROFIL
     Route::prefix('profil')->name('profil.')->group(function () {
         Route::get('/sejarah', History::class)->name('sejarah');
