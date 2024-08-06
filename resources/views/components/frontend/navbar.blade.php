@@ -24,14 +24,14 @@
                                     <i class="icon-envelop"></i>
                                     <div class="home-three-header-top-content-wrapper-info">
                                         <span>Email Kami</span>
-                                        <a href="mailto:Officeat@gmail.com">{{ $AppIdentitiy->email_school }}</a>
+                                        <a href="mailto:Officeat@gmail.com">{{ $AppIdentitiy->email_school ?? '-'}}</a>
                                     </div>
                                 </li>
                                 <li class="li-content">
                                     <i class="flaticon-map"></i>
                                     <div class="home-three-header-top-content-wrapper-info">
                                         <span>Lokasi Kami</span>
-                                        <a href="mailto:Officeat@gmail.com">{{ $IdentitySchool->location_study }}</a>
+                                        <a href="mailto:Officeat@gmail.com">{{ $IdentitySchool->location_study ?? '-' }}</a>
                                     </div>
                                 </li>
                             </ul>
@@ -50,10 +50,10 @@
             <div id="mobile-menu-wrap"></div>
             <div class="mobile-content">
                 <ul>
-                    <li><a href="tel:+000(123)45688"><i class="fa-brands fa-whatsapp"></i>{{ $AppIdentitiy->contact_school}}</a></li>
+                    <li><a href="tel:+000(123)45688"><i class="fa-brands fa-whatsapp"></i>{{ $AppIdentitiy->contact_school ?? '-'}}</a></li>
                     <li class="li-content">
                         <a href="mailto:info.wrapdiv.com">
-                            <i class="fa-regular fa-envelope"></i>{{ $AppIdentitiy->email_school }}
+                            <i class="fa-regular fa-envelope"></i>{{ $AppIdentitiy->email_school ?? '-'}}
                         </a>
                     </li>
                 </ul>

@@ -1,13 +1,13 @@
 @php
    use App\Models\IdentitiySchool;
-    $appIdentity = IdentitiySchool::first();
+    $IdentitySchool = IdentitiySchool::first();
 @endphp
 
 <div>
     <aside class="sidebar-wrapper" data-simplebar="true">
         <div class="sidebar-header d-flex">
             <div class="m-auto pt-2">
-                <img src="{{ asset('storage/' . $appIdentity->logo) }}" class="logo-icon" alt="logo icon" height="80px">
+                <img src="{{ asset($IdentitySchool && $IdentitySchool->logo ? 'storage/' . $IdentitySchool->logo : 'backend/assets/images/NoImage.png') }}" class="logo-icon" alt="logo icon" height="80px">
             </div>
         </div>
         <ul class="metismenu" id="menu">

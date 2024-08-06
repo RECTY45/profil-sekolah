@@ -1,6 +1,6 @@
 @php
    use App\Models\IdentitiySchool;
-    $appIdentity = IdentitiySchool::first();
+   $appIdentity = IdentitiySchool::first();
 @endphp
 
 <div>
@@ -11,7 +11,7 @@
                     <div class="overflow-hidden">
                         <div class="text-center mb-lg-0 pb-3">
                             <a href="{{ route('beranda') }}">
-                                <img src="{{ 'storage/'.$appIdentity->logo }}" width="200" height="120">
+                                <img src="{{ asset($appIdentity && $appIdentity->logo ? 'storage/'.$appIdentity->logo : 'backend/assets/images/NoImage.png') }}" width="200" height="120">
                             </a>
                         </div>
                         <div class="row g-0 card shadow rounded-0">
@@ -21,14 +21,12 @@
                                     <x-backend.alert />
 
                                     <form wire:submit='save' class="form-body">
-                                        <div class="login-separater text-center mb-4">
-                                        </div>
+                                        <div class="login-separater text-center mb-4"></div>
                                         <div class="row g-3">
                                             <div class="col-12">
                                                 <label for="inputEmailAddress" class="form-label">Alamat Email</label>
                                                 <div class="ms-auto position-relative">
-                                                    <div
-                                                        class="position-absolute top-50 translate-middle-y search-icon px-3">
+                                                    <div class="position-absolute top-50 translate-middle-y search-icon px-3">
                                                         <i class="bi bi-envelope-fill"></i>
                                                     </div>
                                                     <x-backend.form.input wire:model.lazy='email' type="email"
@@ -39,8 +37,7 @@
                                             <div class="col-12">
                                                 <label for="inputChoosePassword" class="form-label">Password</label>
                                                 <div class="ms-auto position-relative">
-                                                    <div
-                                                        class="position-absolute top-50 translate-middle-y search-icon px-3">
+                                                    <div class="position-absolute top-50 translate-middle-y search-icon px-3">
                                                         <i class="bi bi-lock-fill"></i>
                                                     </div>
                                                     <x-backend.form.input wire:model.lazy='password' type="password"
